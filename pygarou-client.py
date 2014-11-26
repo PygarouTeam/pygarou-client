@@ -3,8 +3,7 @@ from java.awt import EventQueue
 from javax.swing import JFrame, JButton
 
 import sys
-sys.path.append(
-	"/home/cybi/Dropbox/Dev/Java/JAR&LIB/MigLayout/miglayout-4.0.jar")
+sys.path.append("lib/miglayout-4.0.jar")
 
 from net.miginfocom.swing import MigLayout
 
