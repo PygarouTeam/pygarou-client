@@ -1,0 +1,8 @@
+# IntelliJ
+.idea/*
+out/*
+
+*.iml
+
+# Linux
+*.swp
