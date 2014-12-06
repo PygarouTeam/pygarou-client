@@ -1,8 +1,10 @@
 # IntelliJ
 .idea/*
 out/*
-
 *.iml
 
 # Linux
 *.swp
+
+# Personal working
+*.todo
