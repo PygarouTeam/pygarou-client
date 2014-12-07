@@ -56,7 +56,8 @@ class GUIGame:
 		self.button_send = JButton("Send")
 		self.frame.getContentPane().add(self.button_send, "cell 1 4,grow")
 
-		self.frame.visible = True
-
 	def __listusers_valuechanged(self, event):
 		self.label_vote.setText("You're voting: " + str(self.list_users.getSelectedValue()))
+
+	def set_visible(self, visible):
+		self.frame.visible = visible
