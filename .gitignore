@@ -1,8 +1,8 @@
 # IntelliJ
 .idea/*
 out/*
+src/META-INF/*
 *.iml
-*.class
 
 # Linux
 *.swp
