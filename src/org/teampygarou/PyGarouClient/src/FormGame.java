@@ -1,3 +1,5 @@
+package org.teampygarou.PyGarouClient.src;
+
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;
