@@ -5,6 +5,8 @@ import net.miginfocom.swing.MigLayout;
 import javax.swing.*;
 import javax.swing.text.DefaultCaret;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class FormGame extends JFrame
 {
@@ -24,6 +26,7 @@ public class FormGame extends JFrame
 	{
 		initTheme();
 		initGui();
+		initEvent();
 	}
 
 	private void initTheme()
@@ -52,7 +55,7 @@ public class FormGame extends JFrame
 		frame = new JFrame();
 		frame.setBounds(new Rectangle(100, 100, 500, 500));
 		frame.setTitle("PyGarou - Made by Woybi and Skyula");
-		frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+		frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		frame.getContentPane().setLayout(new MigLayout("", "[65%][10%][25%]", "[][][][grow][]"));
 
 		progressDay = new JProgressBar();
@@ -90,5 +93,17 @@ public class FormGame extends JFrame
 
 		buttonSend = new JButton("Send");
 		frame.getContentPane().add(buttonSend, "cell 1 4,grow");
+	}
+
+	private void initEvent()
+	{
+		frame.addWindowListener(new WindowAdapter()
+		{
+			@Override
+			public void windowClosing(WindowEvent e)
+			{
+				frame.setVisible(false);
+			}
+		});
 	}
 }
